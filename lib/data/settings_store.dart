@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
+
+import 'app_dirs.dart';
 
 /// Ordering options offered in the library toolbar.
 enum SortMode {
@@ -44,7 +45,7 @@ class SettingsStore {
   bool get groupByDate => _groupByDate;
 
   Future<File> get _file async {
-    final support = await getApplicationSupportDirectory();
+    final support = resolveSupportDirectory();
     return File(p.join(support.path, 'settings.json'));
   }
 

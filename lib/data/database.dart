@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 import '../models/album.dart';
 import '../models/photo.dart';
+import 'app_dirs.dart';
 
 /// Local SQLite index of the photo library. Original files are never touched;
 /// this database only stores an index, generated thumbnails and metadata.
@@ -23,7 +23,7 @@ class AppDatabase {
 
   Future<void> init() async {
     if (_db != null) return;
-    final support = await getApplicationSupportDirectory();
+    final support = resolveSupportDirectory();
     final dbDir = Directory(p.join(support.path, 'db'));
     await dbDir.create(recursive: true);
     _db = await openDatabase(

@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:image/image.dart' as img;
 import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
 
 import '../models/photo.dart';
+import 'app_dirs.dart';
 import 'settings_store.dart';
 
 /// Formats the pure-Dart `image` package can actually decode into a raster.
@@ -33,7 +33,7 @@ class ThumbnailCache {
     if (custom != null && custom.isNotEmpty) {
       _dir = Directory(custom);
     } else {
-      final support = await getApplicationSupportDirectory();
+      final support = resolveSupportDirectory();
       _dir = Directory(p.join(support.path, 'thumbnails'));
     }
     await _dir!.create(recursive: true);
