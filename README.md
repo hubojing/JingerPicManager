@@ -10,9 +10,11 @@
 
 ## 下载与运行
 
-1. 到 Releases 下载 `JingerPicManager-Windows-x64.zip`（或直接取构建好的 `output` 整个文件夹）。
+1. 到 [**Releases 页面**](https://github.com/hubojing/JingerPicManager/releases/latest) 下载最新版本的 `JingerPicManager-v0.0.1-windows-x64.zip`。
 2. 解压到任意位置，**双击 `JingerPicManager.exe`** 即可运行。
 3. 无需安装，不会往注册表写东西；不想用了直接删掉文件夹就是卸载。
+
+**当前版本**：[v0.0.1](https://github.com/hubojing/JingerPicManager/releases/latest) · **文件大小**：约 50 MB
 
 **系统要求**：Windows 10 或 Windows 11（64 位），约 200 MB 可用空间。
 
