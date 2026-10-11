@@ -1,0 +1,10 @@
+# Normalize line endings across platforms (Flutter sources are LF-friendly).
+* text=auto
+
+# Binary assets must never be normalized.
+*.ico binary
+*.png binary
+*.jpg binary
+*.dll binary
+*.exe binary
+*.onnx binary

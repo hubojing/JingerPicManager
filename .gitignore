@@ -1,0 +1,79 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+flutter_*.png
+linked_*.ds
+unlinked.ds
+unlinked_spec.ds
+
+# Windows generated
+windows/flutter/ephemeral/
+
+# Local database / cache (user data, not source)
+*.db
+/thumbnails/
+
+# Coverage
+coverage/
+
+# Symbols
+app.*.symbols
+
+# --- JingerPicManager specific ---
+
+# Release artifacts (distributable bundle)
+/output/
+
+# Large third-party binaries: fetched separately, see README "从源码构建"
+/assets/models/
+/windows/third_party/
+/windows/runner/*.dll
+*.pdb
+*.exp
+*.lib
+*.so
+
+# Face pipeline debug tool: build output and decoded photo samples.
+# IMPORTANT: samples may be copies of your own private photos - never commit.
+/tools/face_probe/build/
+/tools/face_probe/samples/
+*.ppm
+*.rgb
+
+# Local runtime data (normally lives in %APPDATA%\jingerpicmanager, this is a
+# safety net so an accidental export can never be committed)
+*.sqlite
+*.sqlite3
+settings.json
+/thumbnails_backup/
+
+# Workspace / assistant data
+.workbuddy/
+
+# Exceptions to above rules.
+!**/no_such_file **/
+!/packages/flutter_tools/test/data/dart_dependencies_test/golden_gitignored/
