@@ -45,8 +45,9 @@ app.*.symbols
 
 # --- JingerPicManager specific ---
 
-# Release artifacts (distributable bundle)
+# Release artifacts (distributable bundle and packaged zip)
 /output/
+/dist/
 
 # Large third-party binaries: fetched separately, see README "从源码构建"
 /assets/models/
